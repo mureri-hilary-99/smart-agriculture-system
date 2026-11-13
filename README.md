@@ -1,4 +1,4 @@
-# Smart Agriculture Crop Recommendation System
+# Smart Agriculture Crop Recommendation System.
 
 An IoT and AI-based crop recommendation system designed to help farmers identify suitable crops using soil and environmental conditions.
 
