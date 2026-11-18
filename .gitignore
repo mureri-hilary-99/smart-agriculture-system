@@ -1,6 +1,6 @@
 # Secrets and environment configuration
 .env
-.freebuff/
+.freebuff/*
 .env.*
 !.env.example
 backend/.env
