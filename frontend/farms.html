@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Farms — Smart Agriculture</title>
+  <meta name="description" content="List and create farms for crop recommendation.">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/config.js"></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="farms">
+  <div id="site-header"></div>
+
+  <main class="container">
+    <header class="page-head" data-reveal>
+      <span class="page-tag">Endpoints 12 / 13 — GET and POST /api/v1/farms</span>
+      <h1>Farms</h1>
+      <p>A farm's coordinates determine the weather used for its recommendations. Farmers see their own farms; administrators see all.</p>
+    </header>
+
+    <div id="farms-alert"></div>
+
+    <section class="section" style="padding-top:0">
+      <div class="grid-2">
+        <form class="form-panel" id="farm-create" novalidate data-reveal>
+          <span class="card-index">POST /api/v1/farms</span>
+          <h3>Register a farm</h3>
+          <div class="field">
+            <label for="name">Farm name</label>
+            <input id="name" name="name" type="text" required>
+            <span class="field-error"></span>
+          </div>
+          <div class="form-grid">
+            <div class="field">
+              <label for="latitude">Latitude</label>
+              <input id="latitude" name="latitude" type="number" step="any" required>
+              <span class="field-error"></span>
+            </div>
+            <div class="field">
+              <label for="longitude">Longitude</label>
+              <input id="longitude" name="longitude" type="number" step="any" required>
+              <span class="field-error"></span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="county">County (optional)</label>
+            <input id="county" name="county" type="text">
+            <span class="field-error"></span>
+          </div>
+          <div class="form-actions"><button class="btn" id="farm-create-submit" type="submit">Add farm</button></div>
+        </form>
+
+        <div class="card" data-reveal data-delay="80">
+          <span class="card-index">GET /api/v1/farms</span>
+          <h3>Your farms</h3>
+          <div class="form-actions" style="margin:0 0 1rem">
+            <button class="btn btn--quiet btn--small" id="farms-prev" type="button" disabled>Previous</button>
+            <button class="btn btn--quiet btn--small" id="farms-next" type="button" disabled>Next</button>
+          </div>
+          <div id="farm-list"><div class="skeleton skeleton-row"></div><div class="skeleton skeleton-row"></div><div class="skeleton skeleton-row"></div></div>
+          <div id="farm-page-info" class="small muted" style="margin-top:.75rem"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script type="module" src="assets/js/pages/farms.js"></script>
+</body>
+</html>

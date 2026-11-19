@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign in — Smart Agriculture</title>
+  <meta name="description" content="Sign in to the smart agriculture dashboard.">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/config.js"></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="auth">
+  <div id="site-header"></div>
+
+  <main class="container">
+    <header class="page-head" data-reveal>
+      <span class="page-tag">Endpoint 06 — POST /api/v1/auth/login</span>
+      <h1>Sign in</h1>
+      <p>Access your farms, devices and saved recommendations.</p>
+    </header>
+
+    <div id="login-alert"></div>
+
+    <section class="section" style="padding-top:0;max-width:560px">
+      <form class="form-panel" id="login-form" novalidate data-reveal>
+        <div class="field">
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+          <span class="field-error"></span>
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" autocomplete="current-password" required>
+          <span class="field-error"></span>
+        </div>
+        <div class="form-actions">
+          <button class="btn" id="login-submit" type="submit">Sign in</button>
+          <a class="btn btn--quiet" href="register.html">Create an account</a>
+        </div>
+        <p class="form-note">Failed sign-in returns 401. Validation problems return 422 with the affected field named in the error.</p>
+      </form>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script type="module" src="assets/js/pages/login.js"></script>
+</body>
+</html>

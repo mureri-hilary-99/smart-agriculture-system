@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>API reference — Smart Agriculture</title>
+  <meta name="description" content="Endpoint contract and frontend coverage for the smart agriculture API.">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/config.js"></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="api">
+  <div id="site-header"></div>
+
+  <main class="container">
+    <header class="page-head" data-reveal>
+      <span class="page-tag">Endpoint 04 — generated API reference</span>
+      <h1>API reference</h1>
+      <p>FastAPI publishes an interactive reference, an alternative renderer and a machine-readable OpenAPI document. The table below maps endpoints 1–18 to the pages in this frontend.</p>
+    </header>
+
+    <div id="api-alert"></div>
+
+    <section class="section" style="padding-top:0">
+      <div class="grid-3">
+        <a class="card card--link" id="link-docs" href="#" target="_blank" rel="noopener" data-reveal>
+          <span class="card-index">Swagger UI</span>
+          <h3>Interactive docs</h3>
+          <p class="small">GET /docs</p>
+          <span class="link-arrow">Open reference</span>
+        </a>
+        <a class="card card--link" id="link-redoc" href="#" target="_blank" rel="noopener" data-reveal data-delay="60">
+          <span class="card-index">ReDoc</span>
+          <h3>Alternative renderer</h3>
+          <p class="small">GET /redoc</p>
+          <span class="link-arrow">Open reference</span>
+        </a>
+        <a class="card card--link" id="link-openapi" href="#" target="_blank" rel="noopener" data-reveal data-delay="120">
+          <span class="card-index">Specification</span>
+          <h3>OpenAPI JSON</h3>
+          <p class="small">GET /openapi.json</p>
+          <span class="link-arrow">Open document</span>
+        </a>
+      </div>
+
+      <div class="card" style="margin-top:1.25rem" data-reveal>
+        <span class="card-index">Connection</span>
+        <h3>API base URL</h3>
+        <p class="small muted">The static frontend has no build step. Change the base URL here to point the whole dashboard at another server.</p>
+        <form id="base-url-form" class="row" style="align-items:flex-end">
+          <div class="field" style="flex:1;min-width:260px;margin:0">
+            <label for="base-url">Base URL</label>
+            <input id="base-url" type="url" required>
+          </div>
+          <button class="btn" type="submit">Save</button>
+          <button class="btn btn--quiet" id="base-url-reset" type="button">Reset</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head" data-reveal>
+        <span class="section-index">Coverage</span>
+        <h2 class="section-title">Endpoints 1–18, each with a page.</h2>
+      </div>
+      <div class="card" data-reveal>
+        <div class="table-wrap"><table>
+          <thead><tr><th>#</th><th>Method / path</th><th>Status</th><th>Frontend page</th></tr></thead>
+          <tbody>
+            <tr><td>01</td><td>GET /</td><td>Implemented</td><td><a class="link-arrow" href="system.html">System status</a></td></tr>
+            <tr><td>02</td><td>GET /health</td><td>Implemented</td><td><a class="link-arrow" href="system.html">System status</a></td></tr>
+            <tr><td>03</td><td>POST /api/v1/predict</td><td>Implemented</td><td><a class="link-arrow" href="predict.html">Crop prediction</a></td></tr>
+            <tr><td>04</td><td>GET /docs, /redoc, /openapi.json</td><td>Generated</td><td>This page</td></tr>
+            <tr><td>05</td><td>POST /api/v1/auth/register</td><td>Planned</td><td><a class="link-arrow" href="register.html">Create account</a></td></tr>
+            <tr><td>06</td><td>POST /api/v1/auth/login</td><td>Planned</td><td><a class="link-arrow" href="login.html">Sign in</a></td></tr>
+            <tr><td>07</td><td>POST /api/v1/auth/refresh</td><td>Planned</td><td><a class="link-arrow" href="profile.html">Profile and session</a></td></tr>
+            <tr><td>08</td><td>GET /api/v1/auth/me</td><td>Planned</td><td><a class="link-arrow" href="profile.html">Profile and session</a></td></tr>
+            <tr><td>09</td><td>PATCH /api/v1/users/me</td><td>Planned</td><td><a class="link-arrow" href="profile.html">Profile and session</a></td></tr>
+            <tr><td>10</td><td>GET /api/v1/admin/users</td><td>Planned</td><td><a class="link-arrow" href="admin-users.html">User administration</a></td></tr>
+            <tr><td>11</td><td>PATCH /api/v1/admin/users/{user_id}</td><td>Planned</td><td><a class="link-arrow" href="admin-users.html">User administration</a></td></tr>
+            <tr><td>12</td><td>GET /api/v1/farms</td><td>Planned</td><td><a class="link-arrow" href="farms.html">Farms</a></td></tr>
+            <tr><td>13</td><td>POST /api/v1/farms</td><td>Planned</td><td><a class="link-arrow" href="farms.html">Farms</a></td></tr>
+            <tr><td>14</td><td>GET /api/v1/farms/{farm_id}</td><td>Planned</td><td><a class="link-arrow" href="farm-detail.html?id=1">Farm detail</a></td></tr>
+            <tr><td>15</td><td>PATCH /api/v1/farms/{farm_id}</td><td>Planned</td><td><a class="link-arrow" href="farm-detail.html?id=1">Farm detail</a></td></tr>
+            <tr><td>16</td><td>POST /api/v1/devices/ingestions</td><td>Planned</td><td><a class="link-arrow" href="device-ingest.html">Sensor ingestion</a></td></tr>
+            <tr><td>17</td><td>GET /api/v1/devices</td><td>Planned</td><td><a class="link-arrow" href="devices.html">ESP32 devices</a></td></tr>
+            <tr><td>18</td><td>POST /api/v1/devices</td><td>Planned</td><td><a class="link-arrow" href="devices.html">ESP32 devices</a></td></tr>
+          </tbody>
+        </table></div>
+      </div>
+      <p class="small muted" style="margin-top:1rem">Endpoints 19–36 (soil readings, weather, recommendations, crops, admin parameters, model info, reports and audit logs) are owned by another teammate and are intentionally excluded from this frontend.</p>
+    </section>
+
+    <section class="section section--tint">
+      <div class="section-head" data-reveal>
+        <span class="section-index">Rules</span>
+        <h2 class="section-title">Contract details the UI respects.</h2>
+      </div>
+      <div class="grid-2">
+        <article class="step" data-reveal>
+          <div class="step-num">01 / Auth</div>
+          <h3>Bearer tokens and device keys</h3>
+          <p>User endpoints send <span class="small">Authorization: Bearer &lt;token&gt;</span>; ingestion sends <span class="small">X-Device-Key</span>. A 401 triggers one refresh attempt before giving up.</p>
+        </article>
+        <article class="step" data-reveal data-delay="80">
+          <div class="step-num">02 / Values</div>
+          <h3>Units and validation</h3>
+          <p>N, P and K are dataset-scaled values ≥ 0; humidity 0–100; pH 0–14; rainfall ≥ 0. Soil moisture is stored and shown but is not a model input.</p>
+        </article>
+        <article class="step" data-reveal>
+          <div class="step-num">03 / Confidence</div>
+          <h3>Low-confidence results</h3>
+          <p>Below 0.60 the server replaces the crop name with a warning string. The UI detects it and shows advice to collect more data or consult an extension officer.</p>
+        </article>
+        <article class="step" data-reveal data-delay="80">
+          <div class="step-num">04 / Errors</div>
+          <h3>Predictable error bodies</h3>
+          <p>Errors use <span class="small">{"detail": ...}</span>. Validation errors may be arrays of field messages; the UI renders either form.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script type="module" src="assets/js/pages/api-reference.js"></script>
+</body>
+</html>

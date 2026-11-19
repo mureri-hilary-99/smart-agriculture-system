@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 300" role="img" aria-label="Placeholder illustration of a soil profile with sensor probe">
+  <rect width="520" height="300" fill="#f7f8f4"/>
+  <rect x="24" y="24" width="472" height="252" fill="#e6f0e9" stroke="#dce2da"/>
+  <rect x="24" y="150" width="472" height="62" fill="#c8b79a"/>
+  <rect x="24" y="212" width="472" height="64" fill="#a89172"/>
+  <path d="M24 150h472" stroke="#8d7759" stroke-width="2"/>
+  <g fill="#5f6b62" opacity=".5">
+    <circle cx="120" cy="172" r="3"/><circle cx="210" cy="188" r="2"/><circle cx="320" cy="166" r="3"/>
+    <circle cx="410" cy="196" r="2"/><circle cx="160" cy="238" r="3"/><circle cx="280" cy="252" r="2"/>
+  </g>
+  <rect x="248" y="70" width="10" height="150" fill="#1c5b3f"/>
+  <rect x="240" y="60" width="26" height="18" fill="#123b2c"/>
+  <path d="M253 60V40" stroke="#1c5b3f" stroke-width="2"/>
+  <circle cx="253" cy="220" r="7" fill="none" stroke="#1c5b3f" stroke-width="2"/>
+  <rect x="24" y="24" width="72" height="3" fill="#26764f"/>
+</svg>

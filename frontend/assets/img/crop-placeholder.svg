@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 300" role="img" aria-label="Placeholder illustration of a crop field">
+  <rect width="520" height="300" fill="#eef2ec"/>
+  <g fill="none" stroke="#c8d5c9" stroke-width="1">
+    <path d="M0 60h520M0 120h520M0 180h520M0 240h520"/>
+    <path d="M65 0v300M130 0v300M195 0v300M260 0v300M325 0v300M390 0v300M455 0v300"/>
+  </g>
+  <path d="M0 205 C90 175 160 225 245 195 S400 165 520 195 L520 300 L0 300 Z" fill="#cbdcc9"/>
+  <path d="M0 245 C100 215 180 260 270 230 S420 205 520 230 L520 300 L0 300 Z" fill="#a9c8a9"/>
+  <g stroke="#3f7a58" stroke-width="3" fill="none">
+    <path d="M95 228v-30M95 228l-12-16M95 228l12-18"/>
+    <path d="M185 242v-30M185 242l-12-16M185 242l12-18"/>
+    <path d="M275 238v-30M275 238l-12-16M275 238l12-18"/>
+    <path d="M365 222v-30M365 222l-12-16M365 222l12-18"/>
+    <path d="M455 228v-30M455 228l-12-16M455 228l12-18"/>
+  </g>
+  <rect x="20" y="20" width="72" height="3" fill="#26764f"/>
+</svg>

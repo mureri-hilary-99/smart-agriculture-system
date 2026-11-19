@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Farm detail — Smart Agriculture</title>
+  <meta name="description" content="View and edit a registered farm.">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/config.js"></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="farms">
+  <div id="site-header"></div>
+
+  <main class="container">
+    <header class="page-head" data-reveal>
+      <span class="page-tag">Endpoints 14 / 15 — GET and PATCH /api/v1/farms/{farm_id}</span>
+      <h1>Farm detail</h1>
+      <p>Inspect a farm's location and update its details. Ownership is enforced by the API.</p>
+    </header>
+
+    <div id="farm-detail-alert"></div>
+
+    <section class="section" style="padding-top:0">
+      <div class="grid-2">
+        <article class="card" data-reveal>
+          <span class="card-index">GET /api/v1/farms/{farm_id}</span>
+          <h3>Record</h3>
+          <div id="farm-read"><div class="skeleton skeleton-block"></div></div>
+        </article>
+        <form class="form-panel" id="farm-edit" novalidate data-reveal data-delay="80">
+          <span class="card-index">PATCH /api/v1/farms/{farm_id}</span>
+          <h3>Edit farm</h3>
+          <div class="field">
+            <label for="name">Farm name</label>
+            <input id="name" name="name" type="text">
+            <span class="field-error"></span>
+          </div>
+          <div class="form-grid">
+            <div class="field">
+              <label for="latitude">Latitude</label>
+              <input id="latitude" name="latitude" type="number" step="any">
+              <span class="field-error"></span>
+            </div>
+            <div class="field">
+              <label for="longitude">Longitude</label>
+              <input id="longitude" name="longitude" type="number" step="any">
+              <span class="field-error"></span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="county">County</label>
+            <input id="county" name="county" type="text">
+            <span class="field-error"></span>
+          </div>
+          <div class="form-actions">
+            <button class="btn" id="farm-edit-submit" type="submit">Save changes</button>
+            <a class="btn btn--quiet" href="farms.html">Back to farms</a>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script type="module" src="assets/js/pages/farm-detail.js"></script>
+</body>
+</html>

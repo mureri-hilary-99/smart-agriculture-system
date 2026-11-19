@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 460" role="img" aria-label="Abstract illustration of cultivated field rows">
+  <rect width="640" height="460" fill="#123b2c"/>
+  <g fill="none" stroke="#3f7a58" stroke-width="1" opacity=".55">
+    <path d="M0 80h640M0 160h640M0 240h640M0 320h640M0 400h640"/>
+    <path d="M80 0v460M160 0v460M240 0v460M320 0v460M400 0v460M480 0v460M560 0v460"/>
+  </g>
+  <path d="M0 330 C110 290 190 350 300 305 S510 260 640 300 L640 460 L0 460 Z" fill="#1b5238"/>
+  <path d="M0 380 C130 340 230 395 340 350 S520 315 640 345 L640 460 L0 460 Z" fill="#286e49"/>
+  <g stroke="#63a37b" stroke-width="3" stroke-linecap="square" opacity=".85">
+    <path d="M70 355v-34M70 355l-14-18M70 355l14-20"/>
+    <path d="M150 372v-34M150 372l-14-18M150 372l14-20"/>
+    <path d="M230 384v-34M230 384l-14-18M230 384l14-20"/>
+    <path d="M310 372v-34M310 372l-14-18M310 372l14-20"/>
+    <path d="M390 356v-34M390 356l-14-18M390 356l14-20"/>
+    <path d="M470 350v-34M470 350l-14-18M470 350l14-20"/>
+    <path d="M550 358v-34M550 358l-14-18M550 358l14-20"/>
+  </g>
+  <rect x="24" y="24" width="96" height="4" fill="#a9bfae"/>
+  <rect x="24" y="36" width="52" height="2" fill="#a9bfae" opacity=".7"/>
+</svg>

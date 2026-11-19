@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>System status — Smart Agriculture</title>
+  <meta name="description" content="Check the smart agriculture API banner and health endpoint.">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/config.js"></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="system">
+  <div id="site-header"></div>
+
+  <main class="container">
+    <header class="page-head" data-reveal>
+      <span class="page-tag">Endpoint 01 / 02 — service checks</span>
+      <h1>System status</h1>
+      <p>Two unversioned endpoints confirm that the service is reachable and healthy. Both are public and require no token.</p>
+    </header>
+
+    <div id="system-alert"></div>
+
+    <section class="section" style="padding-top:0">
+      <div class="grid-2">
+        <article class="card" data-reveal>
+          <span class="card-index">GET /</span>
+          <h3>Service banner</h3>
+          <p>Returns the API message and an overall status string.</p>
+          <div id="banner-result" class="stack"><div class="skeleton skeleton-block"></div></div>
+        </article>
+        <article class="card" data-reveal data-delay="80">
+          <span class="card-index">GET /health</span>
+          <h3>Health check</h3>
+          <p>Returns a liveness signal used before relying on any recommendation.</p>
+          <div id="health-result" class="stack"><div class="skeleton skeleton-block"></div></div>
+        </article>
+      </div>
+
+      <div class="form-actions" style="margin-top:1.5rem">
+        <button class="btn" id="check-all" type="button">Run checks</button>
+        <a class="btn btn--quiet" href="api-reference.html">View API contract</a>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script type="module" src="assets/js/pages/system.js"></script>
+</body>
+</html>

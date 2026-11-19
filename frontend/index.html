@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Smart Agriculture — Crop Recommendation</title>
+  <meta name="description" content="A decision-support dashboard for farm-specific crop recommendations using soil and weather data.">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/config.js"></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="overview">
+  <div id="site-header"></div>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div data-reveal>
+          <p class="eyebrow">IoT and AI decision support / Kenya</p>
+          <h1>Crop decisions rooted in real farm data.</h1>
+          <p class="lede">Soil and weather readings feed a trained model that recommends the crops best suited to your farm. The system advises; the final decision stays with you.</p>
+          <div class="row">
+            <a class="btn" href="predict.html">Get a recommendation</a>
+            <a class="btn btn--ghost" href="api-reference.html">Read the API contract</a>
+          </div>
+        </div>
+        <div class="hero-media" data-parallax data-reveal data-delay="120">
+          <img src="assets/img/field-hero.svg" alt="Abstract illustration of cultivated field rows">
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="section-index">01 / Modules</span>
+          <h2 class="section-title">Everything the system does, in one place.</h2>
+        </div>
+        <div class="grid-3">
+          <a class="card card--link" href="predict.html" data-reveal>
+            <span class="card-index">01 — Prediction</span>
+            <h3>Crop recommendation</h3>
+            <p>Enter the seven model inputs and receive a ranked result with confidence.</p>
+            <span class="link-arrow">Open prediction</span>
+          </a>
+          <a class="card card--link" href="farms.html" data-reveal data-delay="60">
+            <span class="card-index">02 — Farms</span>
+            <h3>Farm registry</h3>
+            <p>Create and manage the plots whose location drives weather and advice.</p>
+            <span class="link-arrow">Open farms</span>
+          </a>
+          <a class="card card--link" href="devices.html" data-reveal data-delay="120">
+            <span class="card-index">03 — Devices</span>
+            <h3>ESP32 devices</h3>
+            <p>Register sensors, issue device keys and submit a field reading batch.</p>
+            <span class="link-arrow">Open devices</span>
+          </a>
+          <a class="card card--link" href="profile.html" data-reveal>
+            <span class="card-index">04 — Account</span>
+            <h3>Profile and session</h3>
+            <p>Sign in, update your details and manage the current access token.</p>
+            <span class="link-arrow">Open account</span>
+          </a>
+          <a class="card card--link" href="system.html" data-reveal data-delay="60">
+            <span class="card-index">05 — System</span>
+            <h3>Service status</h3>
+            <p>Check the API banner and health endpoint before relying on a result.</p>
+            <span class="link-arrow">Open status</span>
+          </a>
+          <a class="card card--link" href="api-reference.html" data-reveal data-delay="120">
+            <span class="card-index">06 — API</span>
+            <h3>API reference</h3>
+            <p>Inspect the exact endpoints, payloads and coverage owned by this frontend.</p>
+            <span class="link-arrow">Open reference</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tint">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="section-index">02 / Process</span>
+          <h2 class="section-title">From field reading to recommendation.</h2>
+        </div>
+        <div class="grid-3">
+          <article class="step" data-reveal>
+            <div class="step-num">01 / Collect</div>
+            <h3>Measure the field</h3>
+            <p>Soil pH, moisture, temperature and humidity come from the ESP32 node; rainfall comes from the weather source.</p>
+          </article>
+          <article class="step" data-reveal data-delay="80">
+            <div class="step-num">02 / Analyse</div>
+            <h3>Validate and infer</h3>
+            <p>The server checks the reading, builds the model input and runs the trained classifier.</p>
+          </article>
+          <article class="step" data-reveal data-delay="160">
+            <div class="step-num">03 / Decide</div>
+            <h3>Read the result</h3>
+            <p>You see the leading crop, its confidence and two alternatives, plus a clear low-confidence warning when needed.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="section-index">03 / Status</span>
+          <h2 class="section-title">API health.</h2>
+        </div>
+        <div class="grid-2">
+          <div class="card" data-reveal>
+            <div id="overview-status" class="stack"><div class="skeleton skeleton-block"></div></div>
+            <div class="form-actions"><button class="btn btn--quiet btn--small" id="status-refresh" type="button">Refresh status</button></div>
+          </div>
+          <div data-reveal data-delay="80">
+            <figure class="card-figure"><img src="assets/img/crop-placeholder.svg" alt="Placeholder illustration of a crop field"></figure>
+            <p class="small muted">Recommendations are decision support, not a planting guarantee. Confirm with local soil tests, seasonality, water availability and extension advice.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script type="module" src="assets/js/pages/overview.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Devices — Smart Agriculture</title>
+  <meta name="description" content="Register ESP32 devices and submit sensor batches.">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/config.js"></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="devices">
+  <div id="site-header"></div>
+
+  <main class="container">
+    <header class="page-head" data-reveal>
+      <span class="page-tag">Endpoints 17 / 18 — GET and POST /api/v1/devices</span>
+      <h1>ESP32 devices</h1>
+      <p>Register a sensor node to receive its device key, then use that key when submitting a field reading batch.</p>
+    </header>
+
+    <div id="devices-alert"></div>
+
+    <section class="section" style="padding-top:0">
+      <div class="grid-2">
+        <form class="form-panel" id="device-register" novalidate data-reveal>
+          <span class="card-index">POST /api/v1/devices — administrator</span>
+          <h3>Register a device</h3>
+          <div class="field">
+            <label for="farm_id">Farm ID</label>
+            <input id="farm_id" name="farm_id" type="number" min="1" step="1" required>
+            <span class="field-error"></span>
+          </div>
+          <div class="field">
+            <label for="label">Label</label>
+            <input id="label" name="label" type="text" placeholder="esp32-plot-a" required>
+            <span class="field-error"></span>
+          </div>
+          <div class="field">
+            <label for="type">Type</label>
+            <select id="type" name="type">
+              <option value="esp32">esp32</option>
+            </select>
+            <span class="field-error"></span>
+          </div>
+          <div class="form-actions"><button class="btn" id="device-register-submit" type="submit">Register device</button></div>
+          <p class="form-note">The device key is returned once at creation and must be stored securely. The server keeps only its hash.</p>
+        </form>
+
+        <div class="card" data-reveal data-delay="80">
+          <span class="card-index">GET /api/v1/devices</span>
+          <h3>Registered devices</h3>
+          <div class="field" style="margin-bottom:1rem">
+            <label for="filter-farm">Filter by farm ID</label>
+            <input id="filter-farm" type="number" min="1" step="1">
+          </div>
+          <div id="device-list"><div class="skeleton skeleton-row"></div><div class="skeleton skeleton-row"></div></div>
+          <div class="form-actions" style="margin-top:1.25rem">
+            <a class="btn btn--quiet btn--small" href="device-ingest.html">Submit a reading</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" id="key-panel" style="margin-top:1.25rem;display:none" data-reveal>
+        <span class="card-index">One-time device key</span>
+        <h3>Save this key now</h3>
+        <p class="small muted">It will not be shown again. Use it as the <span class="small">X-Device-Key</span> header on ingestion requests.</p>
+        <pre class="code-block" id="device-key-value"></pre>
+        <div class="form-actions">
+          <button class="btn btn--quiet btn--small" id="copy-key" type="button">Copy key</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script type="module" src="assets/js/pages/devices.js"></script>
+</body>
+</html>

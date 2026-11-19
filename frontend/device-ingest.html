@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sensor ingestion — Smart Agriculture</title>
+  <meta name="description" content="Submit an ESP32 sensor batch to the ingestion endpoint.">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/config.js"></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="devices">
+  <div id="site-header"></div>
+
+  <main class="container">
+    <header class="page-head" data-reveal>
+      <span class="page-tag">Endpoint 16 — POST /api/v1/devices/ingestions</span>
+      <h1>Sensor ingestion</h1>
+      <p>Submit a reading batch exactly as the ESP32 would. The device key is sent in the <span class="small">X-Device-Key</span> header; implausible values are stored with quality flags rather than silently dropped.</p>
+    </header>
+
+    <div id="ingest-alert"></div>
+
+    <section class="section" style="padding-top:0">
+      <div class="grid-2">
+        <form class="form-panel" id="ingest-form" novalidate data-reveal>
+          <span class="card-index">Device and timing</span>
+          <div class="form-grid">
+            <div class="field">
+              <label for="device_id">Device ID</label>
+              <input id="device_id" name="device_id" type="text" placeholder="esp32-001" required>
+              <span class="field-error"></span>
+            </div>
+            <div class="field">
+              <label for="recorded_at">Recorded at</label>
+              <input id="recorded_at" name="recorded_at" type="datetime-local" required>
+              <span class="field-hint">Converted to an ISO 8601 UTC timestamp</span>
+              <span class="field-error"></span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="device_key">Device key (X-Device-Key)</label>
+            <input id="device_key" name="device_key" type="text" required>
+            <span class="field-error"></span>
+          </div>
+
+          <hr class="divider">
+          <span class="card-index">Soil reading</span>
+          <div class="form-grid">
+            <div class="field"><label for="N">Nitrogen (N)</label><input id="N" name="N" type="number" step="any" required><span class="field-error"></span></div>
+            <div class="field"><label for="P">Phosphorus (P)</label><input id="P" name="P" type="number" step="any" required><span class="field-error"></span></div>
+            <div class="field"><label for="K">Potassium (K)</label><input id="K" name="K" type="number" step="any" required><span class="field-error"></span></div>
+            <div class="field"><label for="ph">Soil pH</label><input id="ph" name="ph" type="number" step="any" min="0" max="14" required><span class="field-error"></span></div>
+            <div class="field"><label for="soil_moisture">Soil moisture (%)</label><input id="soil_moisture" name="soil_moisture" type="number" step="any" min="0" max="100" required><span class="field-error"></span></div>
+            <div class="field"><label for="soil_temperature">Air temperature (°C)</label><input id="soil_temperature" name="soil_temperature" type="number" step="any" required><span class="field-error"></span></div>
+            <div class="field"><label for="soil_humidity">Humidity (%)</label><input id="soil_humidity" name="soil_humidity" type="number" step="any" min="0" max="100" required><span class="field-error"></span></div>
+          </div>
+
+          <hr class="divider">
+          <span class="card-index">Weather</span>
+          <div class="form-grid">
+            <div class="field"><label for="weather_temperature">Temperature (°C)</label><input id="weather_temperature" name="weather_temperature" type="number" step="any" required><span class="field-error"></span></div>
+            <div class="field"><label for="weather_humidity">Humidity (%)</label><input id="weather_humidity" name="weather_humidity" type="number" step="any" min="0" max="100" required><span class="field-error"></span></div>
+            <div class="field"><label for="rainfall">Rainfall (mm)</label><input id="rainfall" name="rainfall" type="number" step="any" min="0" required><span class="field-error"></span></div>
+          </div>
+          <div class="form-actions"><button class="btn" id="ingest-submit" type="submit">Submit batch</button></div>
+          <p class="form-note">The server resolves weather from farm coordinates when the weather object is absent. Soil moisture is displayed and stored, but it is not a model feature in this version.</p>
+        </form>
+
+        <div data-reveal data-delay="80">
+          <div class="card">
+            <span class="card-index">Response 201</span>
+            <h3>Ingestion result</h3>
+            <div id="ingest-result"><p class="muted small">No batch submitted yet.</p></div>
+          </div>
+          <details class="details">
+            <summary>Raw API response</summary>
+            <pre class="code-block" id="ingest-raw">No response yet.</pre>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script type="module" src="assets/js/pages/device-ingest.js"></script>
+</body>
+</html>
