@@ -45,11 +45,13 @@ copy .env.example .env
 uvicorn app.main:app --reload
 ```
 
-Open API documentation at:
+Open the generated interactive API reference at:
 
 ```text
 http://localhost:8000/docs
 ```
+
+The full API contract for frontend and database work — including implemented endpoints, proposal-derived endpoints, shared schemas, and the proposed database mapping — is in [`docs/API_DOCUMENTATION.md`](docs/API_DOCUMENTATION.md).
 
 ### Model training
 

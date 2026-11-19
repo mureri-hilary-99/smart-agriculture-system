@@ -32,3 +32,10 @@ pnpm-debug.log*
 Thumbs.db
 .vscode/
 *.log
+
+commands.txt
+
+# Local tooling / scratch directories
+test-system/
+.freebuff/
+.git/
