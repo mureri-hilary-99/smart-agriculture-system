@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" role="img" aria-label="Illustration of cultivated field rows">
+  <rect width="960" height="420" fill="#f5f1e8"/>
+  <rect width="960" height="150" fill="#e8f3ea"/>
+  <rect y="149" width="960" height="1" fill="#d8e2d9"/>
+  <circle cx="792" cy="74" r="38" fill="#c9e2d0"/>
+  <circle cx="792" cy="74" r="20" fill="#3a9a61"/>
+  <g fill="#236b3d">
+    <path d="M0 180 L960 150 L960 178 L0 212 Z"/>
+    <path d="M0 236 L960 206 L960 234 L0 268 Z"/>
+    <path d="M0 292 L960 262 L960 290 L0 324 Z"/>
+    <path d="M0 348 L960 318 L960 346 L0 380 Z"/>
+  </g>
+  <g fill="#2c8450">
+    <path d="M0 205 L960 175 L960 190 L0 222 Z"/>
+    <path d="M0 261 L960 231 L960 246 L0 278 Z"/>
+    <path d="M0 317 L960 287 L960 302 L0 334 Z"/>
+    <path d="M0 373 L960 343 L960 358 L0 390 Z"/>
+  </g>
+  <g fill="#3a9a61">
+    <rect x="96" y="168" width="6" height="34" transform="rotate(-2 99 185)"/>
+    <rect x="286" y="162" width="6" height="34" transform="rotate(-2 289 179)"/>
+    <rect x="476" y="156" width="6" height="34" transform="rotate(-2 479 173)"/>
+    <rect x="666" y="150" width="6" height="34" transform="rotate(-2 669 167)"/>
+    <rect x="856" y="144" width="6" height="34" transform="rotate(-2 859 161)"/>
+  </g>
+  <g fill="#12351f" opacity="0.22">
+    <rect x="0" y="404" width="960" height="16"/>
+  </g>
+</svg>

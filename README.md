@@ -14,7 +14,7 @@ An IoT and AI-based crop recommendation system designed to help farmers identify
   - Humidity
   - Soil pH
   - Rainfall
-- Next.js and TypeScript farmer dashboard
+- Vanilla HTML, CSS and JavaScript field console
 - Recommendation confidence and top alternative crops
 - Planned ESP32, DHT22/DHT10, MQTT, and database integration
 
@@ -23,7 +23,7 @@ An IoT and AI-based crop recommendation system designed to help farmers identify
 ```text
 Sensors / manual farm input
         ↓
-Next.js dashboard
+HTML / CSS / JS dashboard
         ↓
 FastAPI REST API
         ↓
@@ -67,11 +67,11 @@ python app\ml\train_model.py
 
 ### Frontend
 
+The field console uses plain HTML, CSS and JavaScript — no build step or package install.
+
 ```cmd
 cd frontend
-copy .env.example .env.local
-npm install
-npm run dev
+python -m http.server 3000
 ```
 
 Open the dashboard at:
@@ -79,6 +79,8 @@ Open the dashboard at:
 ```text
 http://localhost:3000
 ```
+
+Set the API base URL and bearer token with the **Connection** button in the top bar. Route-to-endpoint mapping and design notes are in [`frontend/README.md`](frontend/README.md).
 
 ## Important notice
 

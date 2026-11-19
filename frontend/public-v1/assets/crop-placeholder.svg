@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" role="img" aria-label="Illustration of crop plants in rows">
+  <rect width="480" height="300" fill="#f5f1e8"/>
+  <rect width="480" height="76" fill="#e8f3ea"/>
+  <rect y="75" width="480" height="1" fill="#d8e2d9"/>
+  <g fill="#236b3d">
+    <path d="M0 244 L480 214 L480 232 L0 264 Z"/>
+    <path d="M0 282 L480 252 L480 270 L0 300 Z"/>
+  </g>
+  <g fill="#2c8450">
+    <path d="M0 258 L480 228 L480 238 L0 270 Z"/>
+    <path d="M0 296 L480 266 L480 276 L0 306 Z"/>
+  </g>
+  <g fill="#12351f">
+    <rect x="78" y="118" width="5" height="126"/>
+    <rect x="198" y="104" width="5" height="138"/>
+    <rect x="318" y="116" width="5" height="126"/>
+    <rect x="428" y="102" width="5" height="138"/>
+  </g>
+  <g fill="#3a9a61">
+    <ellipse cx="64" cy="146" rx="20" ry="8" transform="rotate(-24 64 146)"/>
+    <ellipse cx="98" cy="162" rx="20" ry="8" transform="rotate(24 98 162)"/>
+    <ellipse cx="184" cy="132" rx="22" ry="9" transform="rotate(-24 184 132)"/>
+    <ellipse cx="220" cy="150" rx="22" ry="9" transform="rotate(24 220 150)"/>
+    <ellipse cx="304" cy="144" rx="20" ry="8" transform="rotate(-24 304 144)"/>
+    <ellipse cx="338" cy="160" rx="20" ry="8" transform="rotate(24 338 160)"/>
+    <ellipse cx="414" cy="130" rx="22" ry="9" transform="rotate(-24 414 130)"/>
+    <ellipse cx="450" cy="148" rx="22" ry="9" transform="rotate(24 450 148)"/>
+  </g>
+  <g fill="#c9e2d0">
+    <circle cx="80" cy="116" r="7"/>
+    <circle cx="200" cy="102" r="7"/>
+    <circle cx="320" cy="114" r="7"/>
+    <circle cx="430" cy="100" r="7"/>
+  </g>
+</svg>

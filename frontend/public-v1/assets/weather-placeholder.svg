@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" role="img" aria-label="Illustration of weather conditions">
+  <rect width="480" height="300" fill="#e8f3ea"/>
+  <rect y="228" width="480" height="72" fill="#f5f1e8"/>
+  <circle cx="106" cy="84" r="42" fill="#c9e2d0"/>
+  <circle cx="106" cy="84" r="24" fill="#3a9a61"/>
+
+  <g fill="#ffffff">
+    <rect x="206" y="70" width="120" height="42" fill="#ffffff"/>
+    <rect x="232" y="48" width="72" height="42" fill="#ffffff"/>
+    <rect x="190" y="90" width="154" height="26" fill="#ffffff"/>
+  </g>
+  <rect x="190" y="114" width="154" height="1" fill="#d8e2d9"/>
+
+  <g stroke="#236b3d" stroke-width="3">
+    <path d="M214 134 L204 158"/>
+    <path d="M250 134 L240 158"/>
+    <path d="M286 134 L276 158"/>
+    <path d="M322 134 L312 158"/>
+  </g>
+
+  <g>
+    <rect x="388" y="46" width="10" height="116" fill="#12351f"/>
+    <circle cx="393" cy="176" r="20" fill="#a85e3c"/>
+    <rect x="390" y="70" width="6" height="92" fill="#c9e2d0"/>
+  </g>
+
+  <g fill="#236b3d" opacity="0.32">
+    <rect x="34" y="246" width="70" height="8"/>
+    <rect x="132" y="246" width="42" height="8"/>
+    <rect x="322" y="246" width="96" height="8"/>
+  </g>
+</svg>
