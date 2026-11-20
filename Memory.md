@@ -24,6 +24,7 @@
 | # | Date | Change | Files affected | Notes |
 | --- | --- | --- | --- | --- |
 | 1 | 2026-11-20 | Created this canary log | `Memory.md` | Setup only. No source files changed. No commit made. |
+| 2 | 2026-11-20 | Moved the working repository path and branch notice to the very top of the file | `Memory.md` | User requested the new path be prominent at the top. No source files changed. No commit made. |
 
 ---
 
