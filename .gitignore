@@ -32,3 +32,6 @@ pnpm-debug.log*
 Thumbs.db
 .vscode/
 *.log
+
+#Commands for github
+commands.txt
